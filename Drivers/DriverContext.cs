@@ -6,7 +6,7 @@
         public abstract IWebDriver GetDriverInstance();
     }
 
-    public class DriverContext :ObjectRepo, IDisposable
+    public class DriverContext : ObjectRepo, IDisposable
     {
         public override Lazy<IWebDriver> _webDriver { get; set; }
         private bool _isDisposed;
