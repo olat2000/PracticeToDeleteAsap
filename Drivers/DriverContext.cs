@@ -2,39 +2,51 @@
 {
     public abstract class ObjectRepo
     {
-        public abstract Lazy<IWebDriver> _webDriver { get; set; }
-        public abstract IWebDriver GetDriverInstance();
+        public abstract IWebDriver driver { get; set; }
+        public abstract IWebDriver CreateWebDriver();
+        public abstract void Dispose();
     }
 
     public class DriverContext : ObjectRepo, IDisposable
     {
-        public override Lazy<IWebDriver> _webDriver { get; set; }
+        /// <summary>
+        /// Boolean property used as conditional check. false by default
+        /// </summary>
         private bool _isDisposed;
 
-        public DriverContext() => _webDriver = new Lazy<IWebDriver>(GetDriverInstance);
+        /// <summary>
+        /// Overriding driver property
+        /// </summary>
+        public override IWebDriver driver { get; set; }
 
-        public IWebDriver current => _webDriver.Value;
-
-        public override IWebDriver GetDriverInstance()
+        /// <summary>
+        /// Creates the Selenium web driver (opens a browser)
+        /// </summary>
+        /// <returns></returns>
+        public override IWebDriver CreateWebDriver()
         {
-            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
-            ChromeOptions options = new ChromeOptions();
-            options.AddArguments("start-maximized", "incognito");
-            var driver = new ChromeDriver(service, options);
+            var chromeDriverService = ChromeDriverService.CreateDefaultService();
+
+            var chromeOptions = new ChromeOptions();
+
+            chromeOptions.AddArguments("start-maximized", "incognito");
+
+            driver = new ChromeDriver(chromeDriverService, chromeOptions);
+
             return driver;
         }
 
-        public void Dispose()
+        /// <summary>
+        /// Disposes the Selenium web driver (closing the browser) after the Scenario completed
+        /// </summary>
+        public override void Dispose()
         {
             if (_isDisposed)
             {
                 return;
             }
 
-            if (_webDriver.IsValueCreated)
-            {
-                current.Quit();
-            }
+            driver.Quit();
 
             _isDisposed = true;
         }

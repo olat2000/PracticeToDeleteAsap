@@ -1,16 +1,17 @@
 using PracticeToDeleteAsap.Support;
+using System.ComponentModel;
 
 namespace PracticeToDeleteAsap.StepDefinitions
 {
     [Binding]
     public class DemoqaStepDefinitions
     {
-        private IWebDriver driver;
+        private readonly IWebDriver driver;
         private DemoQaHomePage? demoQaHomePage;
 
-        public DemoqaStepDefinitions(DriverContext context)
+        public DemoqaStepDefinitions(IObjectContainer container)
         {
-            driver = context.current;
+            driver = container.Resolve<IWebDriver>();
             demoQaHomePage = new DemoQaHomePage(driver);
         }
 

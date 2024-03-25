@@ -3,13 +3,13 @@ namespace PracticeToDeleteAsap.StepDefinitions;
 [Binding]
 public sealed class CalculatorStepDefinitions
 {
-    private IWebDriver driver;
+    private readonly IWebDriver driver;
     private WaitMethod waitFor;
     private ScenarioContext? scContext;
-    public CalculatorStepDefinitions(DriverContext context, 
+    public CalculatorStepDefinitions(IObjectContainer container, 
         ScenarioContext sccontext)
     {
-        driver = context.current;
+        driver = container.Resolve<IWebDriver>();
         waitFor = new WaitMethod(driver);
         scContext = sccontext;
     }
