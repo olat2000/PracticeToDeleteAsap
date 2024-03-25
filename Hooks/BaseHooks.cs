@@ -3,24 +3,17 @@
 [Binding]
 public sealed class BaseHooks
 {
-    [BeforeScenario("@Calculator")]
-    public void BeforeScenarioWithTag(DriverContext context, 
-        readFromConfig readFromConfig)
-    {
-        context.current.Navigate().GoToUrl(readFromConfig
+    [BeforeScenario("@Calculator")] //This will run test with @Calculator
+    public void BeforeScenarioWithTag(DriverContext context,
+        readFromConfig readFromConfig) => context.current.Navigate().GoToUrl(readFromConfig
             .GetJsonData("env:calculatorurl"));
-        //The below allows you to use urls in TestUrl class directly instead of using the once from .json file
-        //context.current.Navigate().GoToUrl(TestUrls.calculatorurl);
-    }
 
-    [BeforeScenario("@Demoqa")]
-    public void NavigateToDemoQaSite(DriverContext context, readFromConfig readFromConfig)
-    {
-        context.current.Navigate().GoToUrl(readFromConfig
+    [BeforeScenario("@Demoqa")] //This will run test with @Demoqa
+    public void NavigateToDemoQaSite(DriverContext context, readFromConfig readFromConfig) 
+        => context.current.Navigate().GoToUrl(readFromConfig
             .GetJsonData("env:demoqaurl"));
-    }
 
-    [BeforeTestRun]
+    [BeforeTestRun] //This resolves null reference errors on objects
     public static void BeforeTestRun(ObjectContainer container, 
         DriverContext context)
     {
@@ -28,9 +21,6 @@ public sealed class BaseHooks
         container.BaseContainer.Resolve<readFromConfig>();
     }
 
-    [AfterScenario]
-    public void CloseBrowser(DriverContext context)
-    {
-        context.Dispose();
-    }
+    [AfterScenario] //This closes the browser
+    public void CloseBrowser(DriverContext context) => context.Dispose();
 }
