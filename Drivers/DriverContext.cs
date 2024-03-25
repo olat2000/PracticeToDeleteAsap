@@ -1,18 +1,21 @@
 ﻿namespace PracticeToDeleteAsap.Drivers
 {
-    public class DriverContext : IDisposable
+    public abstract class ObjectRepo
     {
-        private readonly Lazy<IWebDriver> _webDriver;
+        public abstract Lazy<IWebDriver> _webDriver { get; set; }
+        public abstract IWebDriver GetDriverInstance();
+    }
+
+    public class DriverContext :ObjectRepo, IDisposable
+    {
+        public override Lazy<IWebDriver> _webDriver { get; set; }
         private bool _isDisposed;
 
-        public DriverContext()
-        {
-            _webDriver = new Lazy<IWebDriver>(GetDriverInstance);
-        }
+        public DriverContext() => _webDriver = new Lazy<IWebDriver>(GetDriverInstance);
 
         public IWebDriver current => _webDriver.Value;
 
-        public IWebDriver GetDriverInstance()
+        public override IWebDriver GetDriverInstance()
         {
             ChromeDriverService service = ChromeDriverService.CreateDefaultService();
             ChromeOptions options = new ChromeOptions();
