@@ -8,13 +8,13 @@ public class WaitMethod
         driver = _driver;
     }
 
-    public T WaitUntilAccepted<T>(Func<T> getResult, Func<T, bool> isResultAccepted) 
+    private T WaitUntilAccepted<T>(Func<T> getResult, Func<T, bool> isResultAccepted) 
         where T : class
     {
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
         return wait.Until(x =>
         {
-            var result = getResult(); //
+            var result = getResult();
             if (!isResultAccepted(result))
                 return default;
 
@@ -22,7 +22,7 @@ public class WaitMethod
         })!;
     }
 
-    public string WaitForElementAndGetText(Func<string> getResult, Func<string, bool> isResultAccepted)
+    private string WaitForElementAndGetText(Func<string> getResult, Func<string, bool> isResultAccepted)
     {
         WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
 
