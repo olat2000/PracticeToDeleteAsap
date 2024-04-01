@@ -1,4 +1,6 @@
-﻿namespace PracticeToDeleteAsap.PageObjects
+﻿using PracticeToDeleteAsap.PageElements;
+
+namespace PracticeToDeleteAsap.PageObjects
 {
     public class DemoQaHomePage
     {
@@ -27,8 +29,7 @@
         public void ClickElementsWithElementCollections()
         {
             waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(0));
-            driver.UseIJavaScroll(ElementCollections.ElementAt(0));
-            ElementCollections.ElementAt(0).S_E_Click();
+            ElementCollections.ElementAt(0).S_E_ClickByJs(driver);
         }
     }
 }

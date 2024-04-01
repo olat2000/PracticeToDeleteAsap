@@ -50,6 +50,9 @@
         public static void S_E_GetOptionsFromDropDown(this IWebElement element, int index)
             => new SelectElement(element).Options.ToList();
 
+        public static IWebElement S_E_ClickByJs(this IWebElement element, IWebDriver driver)
+            => (IWebElement)((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", element);
+
         public static string AddRandomDigit(this string text) => text + new Random().Next(1, 999).ToString();
         public static int AddRandomDigit(this int text) => new Random().Next(1, 999);
     }
