@@ -37,5 +37,8 @@
 
         public static void S_E_GetOptionsFromDropDown(IWebElement element, int index)
             => new SelectElement(element).Options.ToList();
+
+        public static IWebElement S_E_ClickByJs(this IWebElement element, IWebDriver driver)
+            => (IWebElement)((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", element);
     }
 }
