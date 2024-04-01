@@ -17,25 +17,40 @@
         public static string S_E_GetText(this IWebElement element)
             => element.Text;
 
+        public static bool S_E_Displayed(this IWebElement element)
+            => element.Displayed;
+
         public static string S_E_GetTextByValueAttribute(this IWebElement element)
             => element.GetAttribute("value");
 
-        public static IReadOnlyCollection<string> S_E_GetAllText(this IList<IWebElement> elements, List<string> datas)
+        public static IReadOnlyCollection<string> S_E_GetAllText(this IList<IWebElement> elements)
         {
-            foreach (var element in elements) { datas.Add(element.Text); }
+            List<string> datas = new List<string>();
+            foreach (var element in elements) 
+            { datas.Add(element.Text); }
             return datas;
         }
 
-        public static void S_E_SelectByTextFromDropDown(IWebElement element, string text) 
+        public static IReadOnlyCollection<string> S_E_GetAllTextByLinqs(this IList<IWebElement> elements)
+        {
+            List<string> datas = new List<string>();
+            elements.ToList().ForEach(x => datas.Add(x.Text));
+            return datas;
+        }
+
+        public static void S_E_SelectByTextFromDropDown(this IWebElement element, string text) 
             => new SelectElement(element).SelectByText(text);
 
-        public static void S_E_SelectByValueFromDropDown(IWebElement element, string text)
+        public static void S_E_SelectByValueFromDropDown(this IWebElement element, string text)
             => new SelectElement(element).SelectByValue(text);
 
-        public static void S_E_SelectByIndexFromDropDown(IWebElement element, int index)
+        public static void S_E_SelectByIndexFromDropDown(this IWebElement element, int index)
             => new SelectElement(element).SelectByIndex(index);
 
-        public static void S_E_GetOptionsFromDropDown(IWebElement element, int index)
+        public static void S_E_GetOptionsFromDropDown(this IWebElement element, int index)
             => new SelectElement(element).Options.ToList();
+
+        public static string AddRandomDigit(this string text) => text + new Random().Next(1, 999).ToString();
+        public static int AddRandomDigit(this int text) => new Random().Next(1, 999);
     }
 }

@@ -20,12 +20,14 @@
         public void ClickElements()
         {
             waitMethod.WaitForElementDisplayed(Elements);
+            driver.UseIJavaScroll(Elements);
             Elements.S_E_Click();
         }
 
         public void ClickElementsWithElementCollections()
         {
             waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(0));
+            driver.UseIJavaScroll(ElementCollections.ElementAt(0));
             ElementCollections.ElementAt(0).S_E_Click();
         }
     }
