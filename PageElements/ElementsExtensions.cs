@@ -54,6 +54,5 @@
             => (IWebElement)((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", element);
 
         public static string AddRandomDigit(this string text) => text + new Random().Next(1, 999).ToString();
-        public static int AddRandomDigit(this int text) => new Random().Next(1, 999);
     }
 }
