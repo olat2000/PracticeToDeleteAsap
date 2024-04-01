@@ -1,6 +1,3 @@
-using PracticeToDeleteAsap.Support;
-using System.ComponentModel;
-
 namespace PracticeToDeleteAsap.StepDefinitions
 {
     [Binding]
@@ -26,6 +23,12 @@ namespace PracticeToDeleteAsap.StepDefinitions
         public void WhenIClickElements()
         {
             demoQaHomePage?.ClickElementsWithElementCollections();
+        }
+
+        [When(@"I click on Forms menu")]
+        public void WhenIClickOnFormsMenu()
+        {
+            demoQaHomePage?.ClickElementsWithFormCollections();
         }
 
         [Then(@"I am on elements page")]
