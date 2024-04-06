@@ -30,3 +30,14 @@ Scenario: Login Test using table in step
 	Then I am loged in as:
 	| Username |
 	| TestUser |
+
+@Demoqa
+Scenario: Login Test using scenario context
+	Then I am on demoqa page
+	When  I select BookStoreApplication menu
+	| BookStoreApplication   |
+	| Book Store Application |
+	And I input Username and Passwor and save username as 'user'
+	| Username | Password    |
+	| TestUser | Password01! |
+	Then user is logged in as 'user'

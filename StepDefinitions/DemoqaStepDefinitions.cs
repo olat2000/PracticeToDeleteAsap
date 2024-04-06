@@ -1,3 +1,5 @@
+using TechTalk.SpecFlow;
+
 namespace PracticeToDeleteAsap.StepDefinitions
 {
     [Binding]
@@ -80,6 +82,24 @@ namespace PracticeToDeleteAsap.StepDefinitions
             Thread.Sleep(1000);
             string userName = demoqaBooksPage.IsUserLoggedIn();
             Assert.That(table.Rows[0]["Username"] == userName, Is.EqualTo(true));
+        }
+
+        [When(@"I input Username and Passwor and save username as '([^']*)'")]
+        public void WhenIInputUsernameAndPassworAndSaveUsernameAs(
+            string user, Table table)
+        {
+            demoqaBooksPage.EnterUserNameAndPassword(
+                table.Rows[0]["Username"], table.Rows[0]["Password"]);
+            ScenarioContext.Current.Add(user, table.Rows[0]["Username"]);
+        }
+
+        [Then(@"user is logged in as '(.*)'")]
+        public void ThenIAmLogedInAs(string expected)
+        {
+            Thread.Sleep(1000);
+            string expectedValue = ScenarioContext.Current.Get<string>(expected);
+            string actualValue = demoqaBooksPage.IsUserLoggedIn();
+            Assert.That(expectedValue == actualValue, Is.EqualTo(true));
         }
     }
 }
