@@ -77,6 +77,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
         [Then(@"I am loged in as:")]
         public void ThenIAmLogedInAs(Table table)
         {
+            Thread.Sleep(1000);
             string userName = demoqaBooksPage.IsUserLoggedIn();
             Assert.That(table.Rows[0]["Username"] == userName, Is.EqualTo(true));
         }

@@ -18,6 +18,7 @@ namespace PracticeToDeleteAsap.PageObjects
 
         public void ClickLoginbtn()
         {
+            driver.UseIJavaScroll(login);
             login.S_E_Click();
         }
 
@@ -26,9 +27,14 @@ namespace PracticeToDeleteAsap.PageObjects
             ClickLoginbtn();
             username.S_E_EnterText(user);
             password.S_E_EnterText(pass);
+            driver.UseIJavaScroll(login);
             ClickLoginbtn();
         }
 
-        public string IsUserLoggedIn() => loggedInUser.S_E_GetText();
+        public string IsUserLoggedIn()
+        {
+            driver.UseIJavaScroll(loggedInUser);
+            return loggedInUser.S_E_GetText();
+        }
     }
 }
