@@ -25,6 +25,7 @@ namespace PracticeToDeleteAsap.PageObjects
         public void ClickElements()
         {
             waitMethod.WaitForElementDisplayed(Elements);
+            driver.UseIJavaScroll(Elements);
             Elements.S_E_Click();
         }
 

@@ -1,6 +1,6 @@
 {
-  "env": {
-    "demoqaurl": "https://demoqa.com",
-    "calculatorurl": "https://specflowoss.github.io/Calculator-Demo/Calculator.html"
-  }
+    "env": {
+        "demoqaurl": "https://demoqa.com",
+        "calculatorurl": "https://specflowoss.github.io/Calculator-Demo/Calculator.html"
+    }
 }
