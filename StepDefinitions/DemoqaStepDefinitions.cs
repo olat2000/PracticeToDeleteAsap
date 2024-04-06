@@ -1,8 +1,3 @@
-using PracticeToDeleteAsap.Support;
-using System.ComponentModel;
-using TechTalk.SpecFlow.Assist;
-using static System.Net.Mime.MediaTypeNames;
-
 namespace PracticeToDeleteAsap.StepDefinitions
 {
     [Binding]
