@@ -1,7 +1,6 @@
 namespace PracticeToDeleteAsap.StepDefinitions;
 
 [Binding]
-
 public class TextBoxTestStepDefinitions
 {
     private readonly IWebDriver driver;

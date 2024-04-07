@@ -18,8 +18,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
 
         [When(@"I click on the Add button")]
         public void WhenIClickOnTheAddButton()
-        {
-            
+        { 
             wTablePg.ClickAddButton();
         }
 
