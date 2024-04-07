@@ -20,6 +20,7 @@
             driver.S_E_By(By.XPath($"//div[@class='card mt-4 top-card'][.='{text}']"));
 
 
+
         public void ClickElements()
         {
             waitMethod.WaitForElementDisplayed(Elements);
@@ -34,6 +35,12 @@
         }
 
         public void ClickElementByName(string text) => ElementsWithParam(text).S_E_ClickByJs(driver);
+
+        public void ClickAlertFrameAndWindowsWithElementCollections()
+        {
+            waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(2));
+            ElementCollections.ElementAt(2).S_E_ClickByJs(driver);
+        }
 
         public void ClickElementsWithFormCollections()
         {

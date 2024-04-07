@@ -16,7 +16,7 @@
 
         public static string S_E_GetText(this IWebElement element)
             => element.Text;
-
+        
         public static bool S_E_Displayed(this IWebElement element)
             => element.Displayed;
 
