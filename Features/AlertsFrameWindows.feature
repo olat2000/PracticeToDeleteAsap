@@ -2,7 +2,7 @@
 
 As a user, I want to be able to receive alerts
 
-@Demoqa
+@Demoqa @Alerts
 Scenario: Click on the Alerts tab 
 	Then I am on demoqa page
 When I click on Alerts, Frame & Windows menu

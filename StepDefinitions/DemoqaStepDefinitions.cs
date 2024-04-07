@@ -110,6 +110,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
             demoQaElementPage.ClickTextBoxTab();
         }
 
+        [Scope(Tag = "@Alerts")]
         [When(@"I click on Alerts, Frame & Windows menu")]
         public void WhenIClickOnAlertsFrameWindowsMenu()
         {

@@ -76,10 +76,12 @@ namespace PracticeToDeleteAsap.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Click on the Alerts tab")]
         [NUnit.Framework.CategoryAttribute("Demoqa")]
+        [NUnit.Framework.CategoryAttribute("Alerts")]
         public virtual void ClickOnTheAlertsTab()
         {
             string[] tagsOfScenario = new string[] {
-                    "Demoqa"};
+                    "Demoqa",
+                    "Alerts"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click on the Alerts tab", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
