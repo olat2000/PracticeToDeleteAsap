@@ -1,8 +1,4 @@
-﻿
-using OpenQA.Selenium.Support.UI;
-using PracticeToDeleteAsap.Support;
-
-namespace PracticeToDeleteAsap.PageObjects
+﻿namespace PracticeToDeleteAsap.PageObjects
 {
     public class DqaAlertsTabPg
     {
@@ -19,8 +15,6 @@ namespace PracticeToDeleteAsap.PageObjects
         private IWebElement AlertsBtn => driver.S_E_By(By.CssSelector("#timerAlertButton"));
         private IWebElement Clickme => driver.S_E_By(By.CssSelector("#promtButton"));
         private IWebElement AlertMessageDisplayed => driver.S_E_By(By.CssSelector("#promptResult"));
-
-
 
 
         public bool AlertstabDisplayed() => Alertstabvisible.S_E_Displayed();

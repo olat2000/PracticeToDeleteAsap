@@ -1,6 +1,3 @@
-using System;
-using TechTalk.SpecFlow;
-
 namespace PracticeToDeleteAsap.StepDefinitions;
 
 [Binding]
