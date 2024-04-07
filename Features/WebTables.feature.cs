@@ -124,14 +124,14 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 14
  testRunner.Then("the Registration form window will appear on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
                             "Lastname",
                             "Email",
                             "Age",
                             "Salary",
                             "Department"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Ben",
                             "May",
                             "benmay@abc.com",
@@ -139,7 +139,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
                             "10000",
                             "Human Resources"});
 #line 15
- testRunner.When("I complete the Registration form with the following data", ((string)(null)), table1, "When ");
+ testRunner.When("I complete the Registration form with the following data", ((string)(null)), table2, "When ");
 #line hidden
 #line 18
  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -201,14 +201,14 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 29
  testRunner.Then("the Registration form window will appear on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
                             "Lastname",
                             "Email",
                             "Age",
                             "Salary",
                             "Department"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Ben",
                             "May",
                             "benmay@abc.com",
@@ -216,7 +216,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
                             "10000",
                             "Human Resources"});
 #line 30
- testRunner.When("I complete the Registration form with the following data", ((string)(null)), table2, "When ");
+ testRunner.When("I complete the Registration form with the following data", ((string)(null)), table3, "When ");
 #line hidden
 #line 33
  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -287,14 +287,14 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 48
  testRunner.Then("the Registration form window will appear on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
                             "Lastname",
                             "Email",
                             "Age",
                             "Salary",
                             "Department"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Ben",
                             "May",
                             "benmay@abc.com",
@@ -302,7 +302,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
                             "10000",
                             "Human Resources"});
 #line 49
- testRunner.When("I complete the Registration form with the following data", ((string)(null)), table3, "When ");
+ testRunner.When("I complete the Registration form with the following data", ((string)(null)), table4, "When ");
 #line hidden
 #line 52
  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

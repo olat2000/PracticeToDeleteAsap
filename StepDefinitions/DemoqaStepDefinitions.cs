@@ -5,11 +5,13 @@ namespace PracticeToDeleteAsap.StepDefinitions
     {
         private readonly IWebDriver driver;
         private DemoQaHomePage? demoQaHomePage;
+        private DqaElementsPg demoQaElementPage;
 
         public DemoqaStepDefinitions(IObjectContainer container)
         {
             driver = container.Resolve<IWebDriver>();
             demoQaHomePage = new DemoQaHomePage(driver);
+            demoQaElementPage = new DqaElementsPg(driver);
         }
 
         [Then(@"I am on demoqa page")]
@@ -30,6 +32,12 @@ namespace PracticeToDeleteAsap.StepDefinitions
         {
             driver.Url.Should().Contain("elements");
             Assert.That(driver.Url.Contains("elements"), Is.EqualTo(true));
+        }
+
+        [When(@"I click on Text Box menu")]
+        public void WhenIClickOnTextBoxMenu()
+        {
+            demoQaElementPage.ClickTextBoxTab();
         }
     }
 }
