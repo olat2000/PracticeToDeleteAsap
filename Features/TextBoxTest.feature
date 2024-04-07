@@ -7,7 +7,7 @@ Scenario Outline: TextBox test
 	Then I am on demoqa page
 	When I click elements
 	Then I am on elements page
-	When I click on Text Box menu
+	When I click on Text Box menu on elements page
 	And I enter Full name <fullname>
 	And I enter email address <email>
 	And I enter Current address <currentaddress>

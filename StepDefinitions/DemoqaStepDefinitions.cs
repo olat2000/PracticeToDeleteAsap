@@ -104,7 +104,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
             Assert.That(expectedValue == actualValue, Is.EqualTo(true));
         }
 
-        [When(@"I click on Text Box menu")]
+        [When(@"I click on Text Box menu on elements page")]
         public void WhenIClickOnTextBoxMenu()
         {
             demoQaElementPage.ClickTextBoxTab();

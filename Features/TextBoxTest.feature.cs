@@ -122,7 +122,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I am on elements page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 10
- testRunner.When("I click on Text Box menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on Text Box menu on elements page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
  testRunner.And(string.Format("I enter Full name {0}", fullname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -139,18 +139,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
  testRunner.And("I click on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "fullname",
                             "email",
                             "currentaddress",
                             "permanentaddress"});
-                table1.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             string.Format("{0}", fullname),
                             string.Format("{0}", email),
                             string.Format("{0}", currentaddress),
                             string.Format("{0}", permanentaddress)});
 #line 16
- testRunner.Then("all the details entered should be displayed", ((string)(null)), table1, "Then ");
+ testRunner.Then("all the details entered should be displayed", ((string)(null)), table6, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
