@@ -16,6 +16,10 @@
         private IList<IWebElement> ElementCollections =>
             driver.S_Es_By(By.XPath("//div[@class='card mt-4 top-card']"));
 
+        private IWebElement ElementsWithParam(string text) =>
+            driver.S_E_By(By.XPath($"//div[@class='card mt-4 top-card'][.='{text}']"));
+
+
         public void ClickElements()
         {
             waitMethod.WaitForElementDisplayed(Elements);
@@ -28,6 +32,8 @@
             waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(0));
             ElementCollections.ElementAt(0).S_E_ClickByJs(driver);
         }
+
+        public void ClickElementByName(string text) => ElementsWithParam(text).S_E_ClickByJs(driver);
 
         public void ClickElementsWithFormCollections()
         {

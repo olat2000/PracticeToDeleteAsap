@@ -35,6 +35,7 @@ public sealed class CalculatorStepDefinitions
         var secondNum = driver.S_E_By(By.Id("second-number"));
             secondNum.Clear();
             secondNum.S_E_EnterText(number.ToString());
+    
     }
 
     [When("the two numbers are added")]
