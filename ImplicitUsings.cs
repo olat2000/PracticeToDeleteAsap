@@ -10,3 +10,4 @@ global using TechTalk.SpecFlow;
 global using NUnit.Framework;
 global using PracticeToDeleteAsap.PageObjects;
 global using PracticeToDeleteAsap.PageElements;
+global using SeleniumExtras.WaitHelpers;

@@ -53,4 +53,16 @@ public class WaitMethod
         return WaitForElementAndGetText(() => element.Text, 
             x => element.Text != null);
     }
+
+    public IWebElement WaitForAlertsFrameWindowsTitleDisplayed(IWebElement alertsFrameWindowsTitle)
+    {
+        return WaitUntilAccepted(() => alertsFrameWindowsTitle, x => alertsFrameWindowsTitle.Displayed);
+    }
+
+    public WebDriverWait WaitForAlertToBeDisplayed()
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        wait.Until(ExpectedConditions.AlertIsPresent());
+        return wait;
+    }
 }
