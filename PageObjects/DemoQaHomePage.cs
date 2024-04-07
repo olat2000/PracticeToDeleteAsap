@@ -1,6 +1,4 @@
-﻿using PracticeToDeleteAsap.PageElements;
-
-namespace PracticeToDeleteAsap.PageObjects
+﻿namespace PracticeToDeleteAsap.PageObjects
 {
     public class DemoQaHomePage
     {
@@ -19,6 +17,7 @@ namespace PracticeToDeleteAsap.PageObjects
             driver.S_Es_By(By.XPath("//div[@class='card mt-4 top-card']"));
 
 
+
         public void ClickElements()
         {
             waitMethod.WaitForElementDisplayed(Elements);
@@ -30,6 +29,12 @@ namespace PracticeToDeleteAsap.PageObjects
         {
             waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(0));
             ElementCollections.ElementAt(0).S_E_ClickByJs(driver);
+        }
+
+        public void ClickAlertFrameAndWindowsWithElementCollections()
+        {
+            waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(2));
+            ElementCollections.ElementAt(2).S_E_ClickByJs(driver);
         }
     }
 }

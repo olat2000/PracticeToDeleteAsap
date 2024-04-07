@@ -5,7 +5,6 @@ namespace PracticeToDeleteAsap.StepDefinitions
     {
         private readonly IWebDriver driver;
         private DemoQaHomePage? demoQaHomePage;
-
         public DemoqaStepDefinitions(IObjectContainer container)
         {
             driver = container.Resolve<IWebDriver>();
@@ -30,6 +29,12 @@ namespace PracticeToDeleteAsap.StepDefinitions
         {
             driver.Url.Should().Contain("elements");
             Assert.That(driver.Url.Contains("elements"), Is.EqualTo(true));
+        }
+
+        [When(@"I click on Alerts, Frame & Windows menu")]
+        public void WhenIClickOnAlertsFrameWindowsMenu()
+        {
+            demoQaHomePage.ClickAlertFrameAndWindowsWithElementCollections();
         }
     }
 }
