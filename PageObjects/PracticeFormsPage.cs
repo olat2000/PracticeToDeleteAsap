@@ -43,10 +43,8 @@
         public void ClickSubmit() => PRsubmitButton.Click();
         public void ClickState() => stateField.Click();
         public void ClickCity(string city) => cityField.Click();
-
         public IWebElement ClickGenderButton(string gender) => genderRadio(gender);
         public IWebElement ClickHobbleCheckbox(string hobby) => hobbiesCheckbox(hobby);
-
         public void AddRegistrationDetails(string firstname, string lastname, string emailtxt,
         string mobilenum, string DateOfBirth, string image, string currentAdds, string state, string city)
         {
