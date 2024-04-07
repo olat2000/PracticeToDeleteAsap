@@ -7,11 +7,15 @@ namespace PracticeToDeleteAsap.StepDefinitions
     {
         private readonly IWebDriver driver;
         private DemoQaHomePage? demoQaHomePage;
+        private DemoqaBooksPage demoqaBooksPage;
+        private DqaElementsPg demoQaElementPage;
+
         public DemoqaStepDefinitions(IObjectContainer container)
         {
             driver = container.Resolve<IWebDriver>();
             demoQaHomePage = new DemoQaHomePage(driver);
             demoqaBooksPage = new DemoqaBooksPage(driver);
+            demoQaElementPage = new DqaElementsPg(driver);
         }
 
         [Then(@"I am on demoqa page")]
@@ -98,6 +102,12 @@ namespace PracticeToDeleteAsap.StepDefinitions
             string expectedValue = ScenarioContext.Current.Get<string>(expected);
             string actualValue = demoqaBooksPage.IsUserLoggedIn();
             Assert.That(expectedValue == actualValue, Is.EqualTo(true));
+        }
+
+        [When(@"I click on Text Box menu on elements page")]
+        public void WhenIClickOnTextBoxMenu()
+        {
+            demoQaElementPage.ClickTextBoxTab();
         }
 
         [When(@"I click on Alerts, Frame & Windows menu")]

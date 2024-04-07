@@ -13,8 +13,8 @@ Then I am on demoqa page
 	When I click on the Add button
 	Then the Registration form window will appear on the screen
 	When I complete the Registration form with the following data
-	| Firstname | Lastname    | Email          | Age | Salary | Department         |
-	| Ben       | May         | benmay@abc.com | 25  | 10000  | Human Resources    |
+	| Firstname | Lastname | Email          | Age | Salary | Department      |
+	| Ben       | May      | benmay@abc.com | 25  | 10000  | Human Resources |  
 	And I click on the submit button
 	Then the entry will be displayed on the list
 

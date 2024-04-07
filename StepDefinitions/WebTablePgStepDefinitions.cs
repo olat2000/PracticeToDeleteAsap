@@ -18,7 +18,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
 
         [When(@"I click on the Add button")]
         public void WhenIClickOnTheAddButton()
-        {
+        { 
             wTablePg.ClickAddButton();
         }
 
@@ -40,7 +40,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
         [When(@"I click on the submit button")]
         public void WhenIClickOnTheSubmitButton()
         {
-            wTablePg.ClickSubmitButton();
+           wTablePg.ClickSubmitButton();
         }
 
         [Then(@"the entry will be displayed on the list")]
