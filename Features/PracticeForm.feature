@@ -3,25 +3,17 @@
 As A User I want to be able to complete the 'Practice Form'
 
 @Demoqa
-Scenario: Demoqa Elements test
+Scenario: Demoqa Practice Form test
 	Then I am on demoqa page
 	When I click on Forms menu
 	And I click on Practice form
 	Then I verify that Student Registration Form is visible
-	When I enter the following <FirstName> And <LastName> field
-	And I enter email field as <EmailAddress> 
-	And I select gender option as <Gender>
-	And I enter phone field as <PhoneNumber>
-	And I enter <DateofBirth>
-	And I enter <Subjects> to choose subject from Dropdown
-	And I select <Hobbies>
-	And I upload a <File>
-	And I enter <PermanentAddress> And <CurrentAddress>
-	And I choose <State> from the dropdown
-	And I choose <City> from the dropdown
-	And I click on Submit button
-	Then all the details entered should be displayed and validated
-
-	Examples: 
-| FirstName | LastName | EmailAddress           | Gender | PhoneNumber | Subjects | Hobbies | File     | PermanentAddress  | CurrentAddress    | State | City  |
-| Racheal   | Stones   | rachealstones@test.com | Female | 00944466679 | Comp     | Reading | Text.txt | 56 Dunduck Avenue | 56 Dunduck Avenue | NRC   | Delhi |
+	When  I have filled out the Registration form with the following data
+	| FirstName | LastName | Email                  | PhoneNumber | DateOfBirth | File     | CurrentAddress    | State   | City    |
+	| Racheal   | Stones   | rachealstones@test.com | 0094446667  |15 May,1990  | Text.txt | 56 Dunduck Avenue | Haryana | Panipat |
+	And I click Gender Option 'Female'
+	And I click on submit button
+	Then all the details entered should be displayed
+	Then the data should be successfully submitted and retrieved 
+	| FirstName | LastName | Email                  | PhoneNumber | DateOfBirth | File     | CurrentAddress    | State   | City    |
+	| Racheal   | Stones   | rachealstones@test.com | 0094446667  | 15 May,1990 | Text.txt | 56 Dunduck Avenue | Haryana | Panipat |

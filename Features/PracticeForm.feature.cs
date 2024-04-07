@@ -74,32 +74,14 @@ namespace PracticeToDeleteAsap.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Demoqa Elements test")]
+        [NUnit.Framework.DescriptionAttribute("Demoqa Practice Form test")]
         [NUnit.Framework.CategoryAttribute("Demoqa")]
-        [NUnit.Framework.TestCaseAttribute("Racheal", "Stones", "rachealstones@test.com", "Female", "00944466679", "Comp", "Reading", "Text.txt", "56 Dunduck Avenue", "56 Dunduck Avenue", "NRC", "Delhi", null)]
-        public virtual void DemoqaElementsTest(string firstName, string lastName, string emailAddress, string gender, string phoneNumber, string subjects, string hobbies, string file, string permanentAddress, string currentAddress, string state, string city, string[] exampleTags)
+        public virtual void DemoqaPracticeFormTest()
         {
-            string[] @__tags = new string[] {
+            string[] tagsOfScenario = new string[] {
                     "Demoqa"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("FirstName", firstName);
-            argumentsOfScenario.Add("LastName", lastName);
-            argumentsOfScenario.Add("EmailAddress", emailAddress);
-            argumentsOfScenario.Add("Gender", gender);
-            argumentsOfScenario.Add("PhoneNumber", phoneNumber);
-            argumentsOfScenario.Add("Subjects", subjects);
-            argumentsOfScenario.Add("Hobbies", hobbies);
-            argumentsOfScenario.Add("File", file);
-            argumentsOfScenario.Add("PermanentAddress", permanentAddress);
-            argumentsOfScenario.Add("CurrentAddress", currentAddress);
-            argumentsOfScenario.Add("State", state);
-            argumentsOfScenario.Add("City", city);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Demoqa Elements test", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Demoqa Practice Form test", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -132,44 +114,60 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.Then("I verify that Student Registration Form is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "Email",
+                            "PhoneNumber",
+                            "DateOfBirth",
+                            "File",
+                            "CurrentAddress",
+                            "State",
+                            "City"});
+                table1.AddRow(new string[] {
+                            "Racheal",
+                            "Stones",
+                            "rachealstones@test.com",
+                            "0094446667",
+                            "15 May,1990",
+                            "Text.txt",
+                            "56 Dunduck Avenue",
+                            "Haryana",
+                            "Panipat"});
 #line 11
- testRunner.When(string.Format("I enter the following {0} And {1} field", firstName, lastName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 12
- testRunner.And(string.Format("I enter email field as {0}", emailAddress), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 13
- testRunner.And(string.Format("I select gender option as {0}", gender), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I have filled out the Registration form with the following data", ((string)(null)), table1, "When ");
 #line hidden
 #line 14
- testRunner.And(string.Format("I enter phone field as {0}", phoneNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click Gender Option \'Female\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.And("I enter <DateofBirth>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
- testRunner.And(string.Format("I enter {0} to choose subject from Dropdown", subjects), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("all the details entered should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "Email",
+                            "PhoneNumber",
+                            "DateOfBirth",
+                            "File",
+                            "CurrentAddress",
+                            "State",
+                            "City"});
+                table2.AddRow(new string[] {
+                            "Racheal",
+                            "Stones",
+                            "rachealstones@test.com",
+                            "0094446667",
+                            "15 May,1990",
+                            "Text.txt",
+                            "56 Dunduck Avenue",
+                            "Haryana",
+                            "Panipat"});
 #line 17
- testRunner.And(string.Format("I select {0}", hobbies), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 18
- testRunner.And(string.Format("I upload a {0}", file), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 19
- testRunner.And(string.Format("I enter {0} And {1}", permanentAddress, currentAddress), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 20
- testRunner.And(string.Format("I choose {0} from the dropdown", state), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
- testRunner.And(string.Format("I choose {0} from the dropdown", city), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 22
- testRunner.And("I click on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 23
- testRunner.Then("all the details entered should be displayed and validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the data should be successfully submitted and retrieved", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

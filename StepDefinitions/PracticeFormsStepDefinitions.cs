@@ -21,79 +21,54 @@ namespace PracticeToDeleteAsap.StepDefinitions
         public void ThenIVerifyThatStudentRegistrationFormIsVisible(string hText)
         {
             driver.Url.Should().Contain(hText.Split(" ")[2].ToLower());
-            
-           var formheaderText = practiceFormsPage.IsFormHeaderTextDisplayed();
-            Assert.That(formheaderText, Is.EqualTo(hText));   
+
+            var formheaderText = practiceFormsPage.IsFormHeaderTextDisplayed();
+            Assert.That(formheaderText, Is.EqualTo(hText));
         }
 
-        [When(@"I enter the following Racheal And Stones field")]
-        public void WhenIEnterTheFollowingRachealAndStonesField()
+        [When(@"I have filled out the Registration form with the following data")]
+        public void WhenIHaveFilledOutTheRegistrationFormWithTheFollowingData(Table table)
         {
-           
+            practiceFormsPage.AddRegistrationDetails(table.Rows[0]["FirstName"],
+             table.Rows[0]["LastName"], table.Rows[0]["Email"], table.Rows[0]["PhoneNumber"], table.Rows[0]["DateOfBirth"],
+             table.Rows[0]["File"], table.Rows[0]["CurrentAddress"], table.Rows[0]["State"], table.Rows[0]["City"]);
         }
 
-        [When(@"I enter email field as rachealstones@test\.com")]
-        public void ThenIEnterRachealstonesTest_Com()
+        [When(@"I click Gender Option '([^']*)'")]
+        public void WhenIClickGenderOption(string female)
         {
-            
+            practiceFormsPage.ClickGenderButton(female);
         }
 
-        [When(@"I select gender option as Female")]
-        public void WhenISelectGenderOptionAsFemale()
+        [When(@"I click on submit button")]
+        public void WhenIClickOnSubmitButton()
         {
-        
+            practiceFormsPage.ClickSubmit();
         }
 
-
-        [When(@"I enter phone field as (.*)")]
-        public void ThenIEnter(int p0)
-        {
-           
-        }
-
-        [When(@"I enter <DateofBirth>")]
-        public void ThenIEnterDateofBirth()
-        {
-        }
-
-        [When(@"I enter Comp to choose subject from Dropdown")]
-        public void ThenIEnterCompToChooseSubjectFromDropdown()
-        {
-        }
-
-        [When(@"I select Reading")]
-        public void ThenISelectReading()
-        {
-        }
-
-        [When(@"I upload a Text\.txt")]
-        public void ThenIUploadAText_Txt()
-        {
-        }
-
-        [When(@"I enter (.*) Dunduck Avenue And (.*) Dunduck Avenue")]
-        public void ThenIEnterDunduckAvenueAndDunduckAvenue(int p0, int p1)
-        {
-        }
-
-        [When(@"I choose NRC from the dropdown")]
-        public void ThenIChooseNRCFromTheDropdown()
-        {
-        }
-
-        [When(@"I choose Delhi from the dropdown")]
-        public void ThenIChooseDelhiFromTheDropdown()
-        {
-        }
-
-        [When(@"I click on Submit button")]
-        public void ThenIClickOnSubmitButton()
-        {
-        }
-
-        [Then(@"all the details entered should be displayed and validated")]
+        [Then(@"all the details entered should be displayed")]
         public void ThenAllTheDetailsEnteredShouldBeDisplayedAndValidated()
         {
+            var result = practiceFormsPage.IsAllDataDisplayed();
+            Assert.True(result);
+        }
+
+        [Then(@"the data should be successfully submitted and retrieved")]
+        public void ThenTheDataShouldBeSuccessfullySubmittedAndRetrieved(Table table)
+        {
+            string phone = practiceFormsPage.retrieveOutPutDatas(6);
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(table.Rows[0]["FirstName"], practiceFormsPage.retrieveOutPutDatas(2).Split(" ")[0]);
+                Assert.AreEqual(table.Rows[0]["LastName"], practiceFormsPage.retrieveOutPutDatas(2).Split(" ")[1]);
+                Assert.AreEqual(table.Rows[0]["Email"], practiceFormsPage.retrieveOutPutDatas(4));
+                Assert.AreEqual(table.Rows[0]["PhoneNumber"], practiceFormsPage.retrieveOutPutDatas(8));
+                Assert.AreEqual(table.Rows[0]["DateOfBirth"], practiceFormsPage.retrieveOutPutDatas(10));
+                Assert.AreEqual(table.Rows[0]["File"], practiceFormsPage.retrieveOutPutDatas(16));
+                Assert.AreEqual(table.Rows[0]["CurrentAddress"], practiceFormsPage.retrieveOutPutDatas(18));
+                Assert.AreEqual(table.Rows[0]["State"], practiceFormsPage.retrieveOutPutDatas(20).Split(" ")[0]);
+                Assert.AreEqual(table.Rows[0]["City"], practiceFormsPage.retrieveOutPutDatas(20).Split(" ")[1]);
+            }); 
         }
     }
 }
