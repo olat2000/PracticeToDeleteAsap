@@ -20,22 +20,22 @@ namespace PracticeToDeleteAsap.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("TextBoxTest")]
-    public partial class TextBoxTestFeature
+    [NUnit.Framework.DescriptionAttribute("PracticeForm")]
+    public partial class PracticeFormFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "TextBoxTest.feature"
+#line 1 "PracticeForm.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "TextBoxTest", "As a user , i want to complete textbox form", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "PracticeForm", "As A User I want to be able to complete the \'Practice Form\'", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,24 +74,14 @@ namespace PracticeToDeleteAsap.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("TextBox test")]
+        [NUnit.Framework.DescriptionAttribute("Demoqa Practice Form test")]
         [NUnit.Framework.CategoryAttribute("Demoqa")]
-        [NUnit.Framework.TestCaseAttribute("Anselme", "test01@test.com", "Glasgow road", "Glasgow road", null)]
-        public virtual void TextBoxTest(string fullname, string email, string currentaddress, string permanentaddress, string[] exampleTags)
+        public virtual void DemoqaPracticeFormTest()
         {
-            string[] @__tags = new string[] {
+            string[] tagsOfScenario = new string[] {
                     "Demoqa"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("fullname", fullname);
-            argumentsOfScenario.Add("email", email);
-            argumentsOfScenario.Add("currentaddress", currentaddress);
-            argumentsOfScenario.Add("permanentaddress", permanentaddress);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TextBox test", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Demoqa Practice Form test", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -116,41 +106,68 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 8
- testRunner.When("I click elements", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on Forms menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.Then("I am on elements page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I click on Practice form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.When("I click on Text Box menu on elements page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I verify that Student Registration Form is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "Email",
+                            "PhoneNumber",
+                            "DateOfBirth",
+                            "File",
+                            "CurrentAddress",
+                            "State",
+                            "City"});
+                table6.AddRow(new string[] {
+                            "Racheal",
+                            "Stones",
+                            "rachealstones@test.com",
+                            "0094446667",
+                            "15 May,1990",
+                            "Text.txt",
+                            "56 Dunduck Avenue",
+                            "Haryana",
+                            "Panipat"});
 #line 11
- testRunner.And(string.Format("I enter Full name {0}", fullname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.And(string.Format("I enter email address {0}", email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 13
- testRunner.And(string.Format("I enter Current address {0}", currentaddress), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I have filled out the Registration form with the following data", ((string)(null)), table6, "When ");
 #line hidden
 #line 14
- testRunner.And(string.Format("I enter Permanent address {0}", permanentaddress), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click Gender Option \'Female\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.And("I click on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
-                            "fullname",
-                            "email",
-                            "currentaddress",
-                            "permanentaddress"});
-                table8.AddRow(new string[] {
-                            string.Format("{0}", fullname),
-                            string.Format("{0}", email),
-                            string.Format("{0}", currentaddress),
-                            string.Format("{0}", permanentaddress)});
 #line 16
- testRunner.Then("all the details entered should be displayed", ((string)(null)), table8, "Then ");
+ testRunner.Then("all the details entered should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName",
+                            "LastName",
+                            "Email",
+                            "PhoneNumber",
+                            "DateOfBirth",
+                            "File",
+                            "CurrentAddress",
+                            "State",
+                            "City"});
+                table7.AddRow(new string[] {
+                            "Racheal",
+                            "Stones",
+                            "rachealstones@test.com",
+                            "0094446667",
+                            "15 May,1990",
+                            "Text.txt",
+                            "56 Dunduck Avenue",
+                            "Haryana",
+                            "Panipat"});
+#line 17
+ testRunner.Then("the data should be successfully submitted and retrieved", ((string)(null)), table7, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

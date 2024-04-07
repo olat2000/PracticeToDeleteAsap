@@ -41,5 +41,11 @@
             waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(2));
             ElementCollections.ElementAt(2).S_E_ClickByJs(driver);
         }
+
+        public void ClickElementsWithFormCollections()
+        {
+            waitMethod.WaitForElementDisplayed(ElementCollections.ElementAt(1));
+            ElementCollections.ElementAt(1).S_E_ClickByJs(driver);
+        }
     }
 }

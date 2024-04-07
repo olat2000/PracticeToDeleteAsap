@@ -8,10 +8,14 @@
 
   <ItemGroup>
     <None Remove="settings.json" />
+    <None Remove="testdata\Text.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testdata\Text.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

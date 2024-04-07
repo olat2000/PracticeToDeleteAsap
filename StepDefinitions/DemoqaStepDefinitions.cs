@@ -31,6 +31,12 @@ namespace PracticeToDeleteAsap.StepDefinitions
             demoQaHomePage?.ClickElementsWithElementCollections();
         }
 
+        [When(@"I click on Forms menu")]
+        public void WhenIClickOnFormsMenu()
+        {
+            demoQaHomePage?.ClickElementsWithFormCollections();
+        }
+
         [Then(@"I am on elements page")]
         public void ThenIAmOnElementsPage()
         {
