@@ -31,6 +31,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
             demoQaHomePage?.ClickElementsWithElementCollections();
         }
 
+        [Scope(Tag = "@Forms")]
         [When(@"I click on Forms menu")]
         public void WhenIClickOnFormsMenu()
         {

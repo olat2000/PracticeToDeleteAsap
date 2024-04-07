@@ -2,7 +2,7 @@
 
 As A User I want to be able to complete the 'Practice Form'
 
-@Demoqa
+@Demoqa @Forms
 Scenario: Demoqa Practice Form test
 	Then I am on demoqa page
 	When I click on Forms menu

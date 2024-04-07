@@ -76,10 +76,12 @@ namespace PracticeToDeleteAsap.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Demoqa Practice Form test")]
         [NUnit.Framework.CategoryAttribute("Demoqa")]
+        [NUnit.Framework.CategoryAttribute("Forms")]
         public virtual void DemoqaPracticeFormTest()
         {
             string[] tagsOfScenario = new string[] {
-                    "Demoqa"};
+                    "Demoqa",
+                    "Forms"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Demoqa Practice Form test", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
