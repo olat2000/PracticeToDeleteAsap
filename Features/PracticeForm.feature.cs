@@ -114,7 +114,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.Then("I verify that Student Registration Form is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Email",
@@ -124,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "CurrentAddress",
                             "State",
                             "City"});
-                table1.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Racheal",
                             "Stones",
                             "rachealstones@test.com",
@@ -135,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Haryana",
                             "Panipat"});
 #line 11
- testRunner.When("I have filled out the Registration form with the following data", ((string)(null)), table1, "When ");
+ testRunner.When("I have filled out the Registration form with the following data", ((string)(null)), table6, "When ");
 #line hidden
 #line 14
  testRunner.And("I click Gender Option \'Female\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -146,7 +146,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 16
  testRunner.Then("all the details entered should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Email",
@@ -156,7 +156,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "CurrentAddress",
                             "State",
                             "City"});
-                table2.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "Racheal",
                             "Stones",
                             "rachealstones@test.com",
@@ -167,7 +167,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Haryana",
                             "Panipat"});
 #line 17
- testRunner.Then("the data should be successfully submitted and retrieved", ((string)(null)), table2, "Then ");
+ testRunner.Then("the data should be successfully submitted and retrieved", ((string)(null)), table7, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -139,18 +139,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
  testRunner.And("I click on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "fullname",
                             "email",
                             "currentaddress",
                             "permanentaddress"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             string.Format("{0}", fullname),
                             string.Format("{0}", email),
                             string.Format("{0}", currentaddress),
                             string.Format("{0}", permanentaddress)});
 #line 16
- testRunner.Then("all the details entered should be displayed", ((string)(null)), table6, "Then ");
+ testRunner.Then("all the details entered should be displayed", ((string)(null)), table8, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
