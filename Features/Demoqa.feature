@@ -11,7 +11,7 @@ Scenario: Demoqa Elements test
 Scenario: Login Test using Example table
 	Then I am on demoqa page
 	When  I click <BookStoreApplication> menu
-	And I enter <Username> and <Password>
+		And I enter <Username> and <Password>
 	Then I am loged in as <Username>
 
 Examples: 
@@ -24,9 +24,9 @@ Scenario: Login Test using table in step
 	When  I select BookStoreApplication menu
 	| BookStoreApplication   |
 	| Book Store Application |
-	And I input Username and Password:
-	| Username | Password    |
-	| TestUser | Password01! |
+		And I input Username and Password:
+		| Username | Password    |
+		| TestUser | Password01! |
 	Then I am loged in as:
 	| Username |
 	| TestUser |
@@ -37,7 +37,7 @@ Scenario: Login Test using scenario context
 	When  I select BookStoreApplication menu
 	| BookStoreApplication   |
 	| Book Store Application |
-	And I input Username and Passwor and save username as 'user'
-	| Username | Password    |
-	| TestUser | Password01! |
+		And I input Username and Passwor and save username as 'user'
+		| Username | Password    |
+		| TestUser | Password01! |
 	Then user is logged in as 'user'

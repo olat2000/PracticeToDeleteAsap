@@ -142,7 +142,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
  testRunner.When("I complete the Registration form with the following data", ((string)(null)), table9, "When ");
 #line hidden
 #line 18
- testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
  testRunner.Then("the entry will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -219,7 +219,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
  testRunner.When("I complete the Registration form with the following data", ((string)(null)), table10, "When ");
 #line hidden
 #line 33
- testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
  testRunner.Then("the entry will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -228,7 +228,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
  testRunner.When("I click on the edit button next to the entry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 36
- testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
  testRunner.Then("the newly edited data \'Nancy\' will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -305,7 +305,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
  testRunner.When("I complete the Registration form with the following data", ((string)(null)), table11, "When ");
 #line hidden
 #line 52
- testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 53
  testRunner.Then("the entry will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -314,7 +314,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
  testRunner.When("I click on the edit button next to the entry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 55
- testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 56
  testRunner.Then("the newly edited data \'Nancy\' will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -160,7 +160,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When(string.Format("I click {0} menu", bookStoreApplication), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
- testRunner.And(string.Format("I enter {0} and {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("I enter {0} and {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
  testRunner.Then(string.Format("I am loged in as {0}", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -215,7 +215,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "TestUser",
                             "Password01!"});
 #line 27
- testRunner.And("I input Username and Password:", ((string)(null)), table2, "And ");
+  testRunner.And("I input Username and Password:", ((string)(null)), table2, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username"});
@@ -274,7 +274,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "TestUser",
                             "Password01!"});
 #line 40
- testRunner.And("I input Username and Passwor and save username as \'user\'", ((string)(null)), table5, "And ");
+  testRunner.And("I input Username and Passwor and save username as \'user\'", ((string)(null)), table5, "And ");
 #line hidden
 #line 43
  testRunner.Then("user is logged in as \'user\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

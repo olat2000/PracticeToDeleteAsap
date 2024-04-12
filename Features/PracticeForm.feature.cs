@@ -111,7 +111,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I click on Forms menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.And("I click on Practice form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Practice form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
  testRunner.Then("I verify that Student Registration Form is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -140,10 +140,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I have filled out the Registration form with the following data", ((string)(null)), table6, "When ");
 #line hidden
 #line 14
- testRunner.And("I click Gender Option \'Female\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click Gender Option \'Female\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.And("I click on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
  testRunner.Then("all the details entered should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

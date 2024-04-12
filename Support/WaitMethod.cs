@@ -17,7 +17,7 @@ public class WaitMethod
             var result = getResult();
             if (!isResultAccepted(result))
                 return default;
-
+            
             return result;
         })!;
     }
@@ -63,6 +63,13 @@ public class WaitMethod
     {
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         wait.Until(ExpectedConditions.AlertIsPresent());
+        return wait;
+    }
+
+    public WebDriverWait WaitForElement(IWebElement element)
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        wait.Until(x => element.Displayed);
         return wait;
     }
 }
