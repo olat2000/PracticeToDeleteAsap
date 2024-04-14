@@ -27,7 +27,6 @@ public class DqaSelectMenuSteps
     public void WhenIValidateThePageIsDisplayed()
     {
         Assert.That(selectMenuPg.PageIsDisplayed(), Is.EqualTo(true));
-
     }
 
     [When(@"I click on select menu")]
@@ -75,8 +74,6 @@ public class DqaSelectMenuSteps
     [Then(@"the selected menus should be validated")]
     public void ThenTheSelectedMenusShouldBeValidated()
     {
-        //selectMenuPg.SelectedMenusShouldBeValidated().Should().BeTrue();
-
         string expectedSelectValueDropdown =
             ScenarioContext.Current.Get<string>("SelectValueDropdown");
 

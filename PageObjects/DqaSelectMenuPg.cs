@@ -23,8 +23,7 @@ public class DqaSelectMenuPg
     private IWebElement dropDownValue(int index0, int index1) => driver.FindElement(By.XPath($"//*[@id='react-select-2-option-{index0}-{index1}']"));
     private IWebElement dropDownSelectOne(int index2, int index3) => driver.FindElement(By.CssSelector($"#react-select-3-option-{index2}-{index3}"));
     private IWebElement dropDownSelectMultiColor(int index0) => driver.FindElement(By.CssSelector($"#react-select-4-option-{index0}"));
-    
-
+  
     public bool ElementsIsDisplayed() => waitMethod.WaitForElementDisplayed(widgets).S_E_Displayed();
 
     public void ClickWidgets()
@@ -47,8 +46,7 @@ public class DqaSelectMenuPg
         driver.UseIJavaScroll(selectOption);
         if (selectOption.TagName.ToLower() == option.ToLower())
         {
-            SelectElement dropdown = new SelectElement(selectOption);
-            dropdown.SelectByText(value);
+            selectOption.S_E_SelectByTextFromDropDown(value);   
         }
         else
         {
@@ -63,8 +61,7 @@ public class DqaSelectMenuPg
         driver.UseIJavaScroll(selectTitle);
         if (selectOption.TagName.ToLower() == option.ToLower())
         {
-            SelectElement dropdown = new SelectElement(selectTitle);
-            dropdown.SelectByValue(value);
+            selectTitle.S_E_SelectByTextFromDropDown(value);
         }
         else
         {
@@ -73,13 +70,11 @@ public class DqaSelectMenuPg
             Console.WriteLine($"Selected option is: Dr.");
             ScenarioContext.Current.Add("SelectOnedropDown", selectTitle.Text);
         }
-    
     }
 
     public void SelectDrpdownStyleColour()
     {
-        SelectElement color = new SelectElement(oldStyleColour);
-        color.SelectByIndex(1);
+        oldStyleColour.S_E_SelectByIndexFromDropDown(1);
         Console.WriteLine($"Selected option is: Blue");
         ScenarioContext.Current.Add("OldStyleSelectMenu", oldStyleColour.Text);
     }
@@ -89,8 +84,7 @@ public class DqaSelectMenuPg
         driver.UseIJavaScroll(multiColour);
         if (selectOption.TagName.ToLower() == option.ToLower())
         {
-            SelectElement dropdown = new SelectElement(multiColour);
-            dropdown.SelectByValue(value);
+            multiColour.S_E_SelectByValueFromDropDown(value);
         }
         else
         {

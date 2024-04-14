@@ -19,5 +19,4 @@ When I click Widgets menu
     | Opel  |
     | audi  |
     | Saab  |
-Then the selected menus should be validated 
-
+Then the selected menus should be validated
