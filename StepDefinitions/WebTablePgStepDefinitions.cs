@@ -13,7 +13,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
         [Then(@"I will arrive on the Web Tables page")]
         public void ThenIWillArriveOnTheWebTablesPage()
         {
-            Assert.True(wTablePg.WebTableDisplayed());
+            Assert.That(wTablePg.WebTableDisplayed(), Is.EqualTo(true));
         }
 
         [When(@"I click on the Add button")]
@@ -47,7 +47,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
         public void ThenTheEntryWillBeDisplayedOnTheList()
         {
             var entryNameIsDisplayed = wTablePg.CaptureBenText();
-            Assert.True(entryNameIsDisplayed);
+            Assert.That(entryNameIsDisplayed, Is.EqualTo(true));
         }
 
         [When(@"I complete the Registration form with a new set of data")]
@@ -74,7 +74,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
         public void ThenTheNewlyEditedDataWillBeDisplayedOnTheList(string value)
         {
             var newlyEditedText = wTablePg.EditedLastnameFieldIsDisplayed(value);
-            Assert.True(newlyEditedText == value);
+            Assert.That(newlyEditedText == value);
         }
 
         [When(@"I complete the Registration form with new data")]
@@ -94,7 +94,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
         [Then(@"the entry will be no longer be available on the list")]
         public void ThenTheEntryWillBeNoLongerBeAvailableOnTheList()
         {
-            Assert.False(wTablePg.DeletedEntryIsNotDisplayed());
+            Assert.That(wTablePg.DeletedEntryIsNotDisplayed(), Is.EqualTo(true));
         }
     }
 }

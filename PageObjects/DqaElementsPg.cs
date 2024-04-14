@@ -16,5 +16,6 @@
 
         public bool ElementsIsDisplayed() => waitMethod.WaitForElementDisplayed(elementsHeaderTest).S_E_Displayed();
         public void ClickWebTablesTab() => webTablesTab.S_E_Click();
+  
     }
 }

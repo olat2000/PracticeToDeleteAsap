@@ -15,7 +15,7 @@ namespace PracticeToDeleteAsap.StepDefinitions
         public void ThenIWillArriveOnTheElementsPage()
         {
             var validateHeaderText = elementsPg.ElementsIsDisplayed();
-            Assert.True(validateHeaderText);
+            Assert.That(validateHeaderText, Is.EqualTo(true));
         }
 
         [When(@"I click on the Web Tables tab")]
