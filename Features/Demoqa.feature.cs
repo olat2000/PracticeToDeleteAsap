@@ -261,9 +261,13 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "BookStoreApplication"});
+                            "BookStoreApplication",
+                            "Student",
+                            "Teacher"});
                 table4.AddRow(new string[] {
-                            "Book Store Application"});
+                            "Book Store Application",
+                            "Joseph",
+                            "Daniel"});
 #line 37
  testRunner.When("I select BookStoreApplication menu", ((string)(null)), table4, "When ");
 #line hidden
@@ -277,6 +281,63 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.And("I input Username and Passwor and save username as \'user\'", ((string)(null)), table5, "And ");
 #line hidden
 #line 43
+ testRunner.Then("user is logged in as \'user\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Login Test using scenario context with Tables")]
+        [NUnit.Framework.CategoryAttribute("Demoqa")]
+        public virtual void LoginTestUsingScenarioContextWithTables()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Demoqa"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login Test using scenario context with Tables", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 46
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 47
+ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "BookStoreApplication",
+                            "Example2"});
+                table6.AddRow(new string[] {
+                            "Book Store Application",
+                            "vsjhvavad"});
+#line 48
+ testRunner.When("I select BookStoreApplication menu from table", ((string)(null)), table6, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Username",
+                            "Password"});
+                table7.AddRow(new string[] {
+                            "TestUser",
+                            "Password01!"});
+#line 51
+  testRunner.And("I input Username and Passwor and save username as \'user\'", ((string)(null)), table7, "And ");
+#line hidden
+#line 54
  testRunner.Then("user is logged in as \'user\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

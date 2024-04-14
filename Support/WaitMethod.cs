@@ -68,8 +68,15 @@ public class WaitMethod
 
     public WebDriverWait WaitForElement(IWebElement element)
     {
-        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
         wait.Until(x => element.Displayed);
+        return wait;
+    }
+
+    public WebDriverWait WaitForElementVisible(By locator)
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+        wait.Until(ExpectedConditions.ElementIsVisible(locator));
         return wait;
     }
 }

@@ -1,3 +1,6 @@
+using PracticeToDeleteAsap.Modules;
+using PracticeToDeleteAsap.Tranformers;
+
 namespace PracticeToDeleteAsap.StepDefinitions;
 
 [Binding]
@@ -46,7 +49,7 @@ public class DemoqaStepDefinitions
     [When(@"I click (.*) menu")]
     public void WhenIClickBookStoreApplication(string text)
     {
-        demoQaHomePage.ClickElementByName(text);
+        demoQaHomePage?.ClickElementByName(text);
     }
 
     [When(@"I enter (.*) and (.*)")]
@@ -63,47 +66,39 @@ public class DemoqaStepDefinitions
     }
 
     [When(@"I select BookStoreApplication menu")]
-    public void WhenISelectBookStoreApplicationMenu(Table table)
+    public void WhenISelectBookStoreApplicationMenu(Library table)
     {
-        List<TableRow> tableData = table.Rows.ToList();
-
-        //demoQaHomePage.
-        //    ClickElementByName(
-        //    table.Rows[0]["BookStoreApplication"]);
-
-        //Example2
-        demoQaHomePage.
-            ClickElementByName(tableData[0].Values.FirstOrDefault());
+        demoQaHomePage?.
+            ClickElementByName(table.BookStoreApplication);
     }
 
     [When(@"I input Username and Password:")]
-    public void WhenIInputUsernameAndPassword(Table table)
+    public void WhenIInputUsernameAndPassword(LoginCredentials tableData)
     {
         demoqaBooksPage.EnterUserNameAndPassword(
-            table.Rows[0]["Username"], table.Rows[0]["Password"]);
+            tableData.UserName, tableData.Password);
     }
 
     [Then(@"I am loged in as:")]
-    public void ThenIAmLogedInAs(Table table)
+    public void ThenIAmLogedInAs(LoginCredentials tableData)
     {
-        Thread.Sleep(1000);
         string userName = demoqaBooksPage.IsUserLoggedIn();
-        Assert.That(table.Rows[0]["Username"] == userName, Is.EqualTo(true));
+        Assert.That(tableData.UserName == userName, Is.EqualTo(true));
     }
 
     [When(@"I input Username and Passwor and save username as '([^']*)'")]
     public void WhenIInputUsernameAndPassworAndSaveUsernameAs(
-        string user, Table table)
+        string user, LoginCredentials tableData)
     {
         demoqaBooksPage.EnterUserNameAndPassword(
-            table.Rows[0]["Username"], table.Rows[0]["Password"]);
-        ScenarioContext.Current.Add(user, table.Rows[0]["Username"]);
+            tableData.UserName, tableData.Password);
+
+        ScenarioContext.Current.Add(user, tableData.UserName);
     }
 
     [Then(@"user is logged in as '(.*)'")]
     public void ThenIAmLogedInAs(string expected)
     {
-        Thread.Sleep(1000);
         string expectedValue = ScenarioContext.Current.Get<string>(expected);
         string actualValue = demoqaBooksPage.IsUserLoggedIn();
         Assert.That(expectedValue == actualValue, Is.EqualTo(true));
@@ -119,6 +114,13 @@ public class DemoqaStepDefinitions
     [When(@"I click on Alerts, Frame & Windows menu")]
     public void WhenIClickOnAlertsFrameWindowsMenu()
     {
-        demoQaHomePage.ClickAlertFrameAndWindowsWithElementCollections();
+        demoQaHomePage?.ClickAlertFrameAndWindowsWithElementCollections();
+    }
+
+    [When(@"I select BookStoreApplication menu from table")]
+    public void WhenISelectBookStoreApplicationMenuFromTable(Library table)
+    {
+        demoQaHomePage?.
+          ClickElementByName(table.BookStoreApplication);
     }
 }

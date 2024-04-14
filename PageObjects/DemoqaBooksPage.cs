@@ -34,7 +34,7 @@ public class DemoqaBooksPage
 
     public string IsUserLoggedIn()
     {
-        waitMethod.WaitForElement(loggedInUser);
+        waitMethod.WaitForElementVisible(By.CssSelector("#userName-value"));
         driver.UseIJavaScroll(loggedInUser);
         return loggedInUser.S_E_GetText();
     }
