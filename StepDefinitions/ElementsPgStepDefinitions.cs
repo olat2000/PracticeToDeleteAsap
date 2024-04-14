@@ -1,15 +1,15 @@
-namespace PracticeToDeleteAsap.StepDefinitions
+namespace PracticeToDeleteAsap.StepDefinitions;
+
+[Binding]
+public class ElementsPgStepDefinitions
 {
-    [Binding]
-    public class ElementsPgStepDefinitions
+    IWebDriver driver;
+    DqaElementsPg elementsPg;
+    public ElementsPgStepDefinitions(IObjectContainer container)
     {
-        IWebDriver driver;
-        DqaElementsPg elementsPg;
-        public ElementsPgStepDefinitions(IObjectContainer container)
-        {
-            driver = container.Resolve<IWebDriver>();
-            elementsPg = new DqaElementsPg(driver);
-        }
+        driver = container.Resolve<IWebDriver>();
+        elementsPg = new DqaElementsPg(driver);
+    }
 
         [Then(@"I will arrive on the Elements page")]
         public void ThenIWillArriveOnTheElementsPage()
@@ -17,11 +17,16 @@ namespace PracticeToDeleteAsap.StepDefinitions
             var validateHeaderText = elementsPg.ElementsIsDisplayed();
             Assert.That(validateHeaderText, Is.EqualTo(true));
         }
+    [Then(@"I will arrive on the Elements page")]
+    public void ThenIWillArriveOnTheElementsPage()
+    {
+        var validateHeaderText = elementsPg.ElementsIsDisplayed();
+        Assert.True(validateHeaderText);
+    }
 
-        [When(@"I click on the Web Tables tab")]
-        public void WhenIClickOnTheWebTablesTab()
-        {
-            elementsPg.ClickWebTablesTab();
-        }
+    [When(@"I click on the Web Tables tab")]
+    public void WhenIClickOnTheWebTablesTab()
+    {
+        elementsPg.ClickWebTablesTab();
     }
 }

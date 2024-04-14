@@ -114,14 +114,14 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 14
  testRunner.Then("the Registration form window will appear on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
                             "Lastname",
                             "Email",
                             "Age",
                             "Salary",
                             "Department"});
-                table2.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Ben",
                             "May",
                             "benmay@abc.com",
@@ -129,10 +129,10 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
                             "10000",
                             "Human Resources"});
 #line 15
- testRunner.When("I complete the Registration form with the following data", ((string)(null)), table2, "When ");
+ testRunner.When("I complete the Registration form with the following data", ((string)(null)), table11, "When ");
 #line hidden
 #line 18
- testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
  testRunner.Then("the entry will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -181,14 +181,14 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 29
  testRunner.Then("the Registration form window will appear on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
                             "Lastname",
                             "Email",
                             "Age",
                             "Salary",
                             "Department"});
-                table3.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "Ben",
                             "May",
                             "benmay@abc.com",
@@ -196,10 +196,10 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
                             "10000",
                             "Human Resources"});
 #line 30
- testRunner.When("I complete the Registration form with the following data", ((string)(null)), table3, "When ");
+ testRunner.When("I complete the Registration form with the following data", ((string)(null)), table12, "When ");
 #line hidden
 #line 33
- testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
  testRunner.Then("the entry will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -208,7 +208,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
  testRunner.When("I click on the edit button next to the entry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 36
- testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
  testRunner.Then("the newly edited data \'Nancy\' will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -257,14 +257,14 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 48
  testRunner.Then("the Registration form window will appear on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Firstname",
                             "Lastname",
                             "Email",
                             "Age",
                             "Salary",
                             "Department"});
-                table4.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Ben",
                             "May",
                             "benmay@abc.com",
@@ -272,10 +272,10 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
                             "10000",
                             "Human Resources"});
 #line 49
- testRunner.When("I complete the Registration form with the following data", ((string)(null)), table4, "When ");
+ testRunner.When("I complete the Registration form with the following data", ((string)(null)), table13, "When ");
 #line hidden
 #line 52
- testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 53
  testRunner.Then("the entry will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -284,7 +284,7 @@ testRunner.Then("I am on demoqa page", ((string)(null)), ((TechTalk.SpecFlow.Tab
  testRunner.When("I click on the edit button next to the entry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 55
- testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I change the lastname field to \'Nancy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 56
  testRunner.Then("the newly edited data \'Nancy\' will be displayed on the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

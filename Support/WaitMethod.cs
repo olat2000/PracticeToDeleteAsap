@@ -17,7 +17,7 @@ public class WaitMethod
             var result = getResult();
             if (!isResultAccepted(result))
                 return default;
-
+            
             return result;
         })!;
     }
@@ -52,5 +52,31 @@ public class WaitMethod
     {
         return WaitForElementAndGetText(() => element.Text, 
             x => element.Text != null);
+    }
+
+    public IWebElement WaitForAlertsFrameWindowsTitleDisplayed(IWebElement alertsFrameWindowsTitle)
+    {
+        return WaitUntilAccepted(() => alertsFrameWindowsTitle, x => alertsFrameWindowsTitle.Displayed);
+    }
+
+    public WebDriverWait WaitForAlertToBeDisplayed()
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        wait.Until(ExpectedConditions.AlertIsPresent());
+        return wait;
+    }
+
+    public WebDriverWait WaitForElement(IWebElement element)
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+        wait.Until(x => element.Displayed);
+        return wait;
+    }
+
+    public WebDriverWait WaitForElementVisible(By locator)
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+        wait.Until(ExpectedConditions.ElementIsVisible(locator));
+        return wait;
     }
 }
