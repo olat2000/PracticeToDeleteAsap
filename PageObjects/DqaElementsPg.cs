@@ -15,11 +15,6 @@ public class DqaElementsPg
     private IWebElement TextBoxTab => driver.S_E_By(By.CssSelector("#item-0"));
 
     public bool ElementsIsDisplayed() => waitMethod.WaitForElementDisplayed(elementsHeaderTest).S_E_Displayed();
-    
     public void ClickWebTablesTab() => webTablesTab.S_E_Click();
     public void ClickTextBoxTab() => TextBoxTab.S_E_Click();
-        public bool ElementsIsDisplayed() => waitMethod.WaitForElementDisplayed(elementsHeaderTest).S_E_Displayed();
-        public void ClickWebTablesTab() => webTablesTab.S_E_Click();
-  
-    }
 }

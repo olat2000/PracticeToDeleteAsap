@@ -80,7 +80,7 @@ public class DqaWebTablePg
     public void ClickEditSecondEntryButton()
     {
         driver.UseIJavaScroll(editSecondEntry);
-        editSecondEntry.S_E_Click();
+        editSecondEntry.S_E_ClickByJs(driver);
     }
 
     public void EditSecondEntryName(string value)

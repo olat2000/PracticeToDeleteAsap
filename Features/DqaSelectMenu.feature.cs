@@ -76,10 +76,12 @@ namespace PracticeToDeleteAsap.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Demoqa Select Menu")]
         [NUnit.Framework.CategoryAttribute("Demoqa")]
+        [NUnit.Framework.CategoryAttribute("Dropdown")]
         public void DemoqaSelectMenu()
         {
             string[] tagsOfScenario = new string[] {
-                    "Demoqa"};
+                    "Demoqa",
+                    "Dropdown"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Demoqa Select Menu", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 7
@@ -96,41 +98,41 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I verify that home page is displayed successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 9
-testRunner.When("I click Widgets menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I click Widgets menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
-    testRunner.And("I validate the page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("I validate the page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
-    testRunner.And("I click on select menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("I click on select menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
-    testRunner.And("I click on dropdown to Select group Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("I click on dropdown to Select group Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
-    testRunner.And("I click on dropdown to Select the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("I click on dropdown to Select the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
-    testRunner.And("I click on dropdown to Select Old Style Colour", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("I click on dropdown to Select Old Style Colour", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
-    testRunner.And("I click on dropdown to Select Multi Colour", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("I click on dropdown to Select Multi Colour", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Cars"});
-                table1.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "volvo"});
-                table1.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Opel"});
-                table1.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "audi"});
-                table1.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Saab"});
 #line 16
-    testRunner.And("I click on dropdown to select multi standard", ((string)(null)), table1, "And ");
+        testRunner.And("I click on dropdown to select multi standard", ((string)(null)), table8, "And ");
 #line hidden
 #line 22
-testRunner.Then("the selected menus should be validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("the selected menus should be validated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
